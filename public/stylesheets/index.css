@@ -15,7 +15,7 @@
   
   .heroSection {
     width: 100%;
-    height: 80vh;
+    height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(/images/hero/hero\ 2.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -76,7 +76,9 @@
   @media (max-width: 950px) {
     .heroSection {
       background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(/images/hero/hero3.jpg);
-
+       background-position: center;
+       background-repeat: no-repeat;
+       background-size: cover;
       }
     }
     @media (max-width: 750px) {
