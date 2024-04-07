@@ -73,14 +73,18 @@
                         </p>
                     </div>
                 </div>
-                <div class="remedy_info_content">
-                    <h2>Related Video link:</h2>
-                    <div class="container_box">
-                        <p>This is the related video link to this remedy.</p><a href="<%= remedy.videoLink %>">
-                            <p>watch now</p>
-                        </a>
+                <% if (remedy.videoLink && remedy.videoLink.length > 0) { %>
+                    <div class="remedy_info_content">
+                        <h2>Related Video link:</h2>
+                        <div class="container_box">
+                            <p>This is the related video link to this remedy.</p><a href="<%= remedy.videoLink %>">
+                                <p>watch now</p>
+                            </a>
+                        </div>
                     </div>
-                </div>
+                <% } %>
+                
+               
                 <div class="remedy_info_content">
                     <h2>Remedie Provider</h2>
                     <div class="container_box box_container">
@@ -190,6 +194,24 @@
         window.onscroll = function (e) {
             localStorage.setItem("scrollpos", window.scrollY);
         };
+
+
+        const shareBtn = document.querySelector("#share_remedy_btn");
+        shareBtn.addEventListener("click",(event)=>{
+            if(navigator.share){
+                navigator.share({
+                    title: "RemediBox",
+                    text: "RemediBox",
+                    url: window.location.href,
+                }).then(()=>{
+                    console.log("Successful Share");
+                }).catch((err)=>{
+                    console.log(err);
+                })
+            }else{
+                alert("Share not supported");
+            }
+        })
     </script>
 
     <% include ./partials/footer.ejs %>
