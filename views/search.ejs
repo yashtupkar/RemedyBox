@@ -37,11 +37,15 @@
             </div>
         </section>
      <div class="pagination">
+        <% if(currentPage>=2){%>
         <a href="?page=<%=  previousPage %>"><button><< prev</button></a>
+        <%}%>
         <% for(let j = 1; j <= totalPages; j++) { %>
             <a href="?page=<%= j %>"><button><%= j %></button></a>
         <% } %>
+        <% if(currentPage<totalPages){%>
         <a href="?page=<%= nextPage %>"><button>next >></button></a>
+        <% } %>
     </div>
     </section>
 
