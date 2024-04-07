@@ -1,0 +1,197 @@
+<% include ./partials/head.ejs %>
+<link rel="stylesheet" href="/stylesheets/remedy.css">
+
+<body>
+    <% include ./partials/navigation.ejs %>
+
+    <section class="remedy_info">
+        <div class="remedy_info_container">
+            <div class="provider_container">
+                <div class="provider_container_box">
+                    <div class="div">
+                        <div class="provider_image">
+                            <% if (remedy && remedy.user && remedy.user.profileImage && remedy.user.profileImage.length > 0) { %>
+                            <a href="/profile"><img src="/images/uploads/<%= remedy.user.profileImage %>" /></a>
+                            <% } else { %>
+                            <a href="/profile"><img src="/images/user img/user1.png" /></a>
+                            <% } %>
+                        </div>
+                        <div class="provider_content">
+                            <h3>
+                                <%= remedy.user.username %>
+                            </h3>
+                            <p>
+                                <%= remedy.user.handel %>
+                            </p>
+                        </div>
+                        <a href=""><i class="fa-solid fa-square-arrow-up-right"></i></a>
+                    </div>
+                    <div class="post_date">
+                        <p>Date: <%= remedy.dateTime.toLocaleDateString() %></p>
+                        <p>Time: <%= remedy.dateTime.toLocaleTimeString() %></p>
+                    </div>
+                </div>
+            </div>
+            <div class="remedy_info_title">
+                <h1>
+                    <%= remedy.title %>
+                </h1>
+            </div>
+            <div class="remedy_info_image">
+                <img src="/images/uploads/<%= remedy.postImage %>">
+            </div>
+            <div class="remedy_content">
+                <div class="remedy_info_content">
+                    <h2>Discription:</h2>
+                    <div class="container_box">
+                        <p>
+                            <%= remedy.discription %>
+                        </p>
+                    </div>
+                </div>
+                <div class="remedy_info_content">
+                    <h2>Ingredients:</h2>
+                    <div class="container_box">
+                        <p>
+                            <%= remedy.ingredients %>
+                        </p>
+                    </div>
+                </div>
+                <div class="remedy_info_content">
+                    <h2>Dosage:</h2>
+                    <div class="container_box">
+                        <p>
+                            <%= remedy.dosage %>
+                        </p>
+                    </div>
+                </div>
+                <div class="remedy_info_content">
+                    <h2>Disclaimer:</h2>
+                    <div class="container_box">
+                        <p>
+                            <%= remedy.disclaimer %>
+                        </p>
+                    </div>
+                </div>
+                <div class="remedy_info_content">
+                    <h2>Related Video link:</h2>
+                    <div class="container_box">
+                        <p>This is the related video link to this remedy.</p><a href="<%= remedy.videoLink %>">
+                            <p>watch now</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="remedy_info_content">
+                    <h2>Remedie Provider</h2>
+                    <div class="container_box box_container">
+                        <div class="container_box_box">
+                            <div class="provider_image">
+                                <% if (remedy && remedy.user && remedy.user.profileImage && remedy.user.profileImage.length > 0) { %>
+                                <a href="/profile"><img src="/images/uploads/<%= remedy.user.profileImage %>" /></a>
+                                <% } else { %>
+                                <a href="/profile"><img src="/images/user img/user1.png" /></a>
+                                <% } %>
+                            </div>
+                            <div class="provider_content">
+                                <h3>
+                                    <%= remedy.user.username %>
+                                </h3>
+                                <p>
+                                    <%= remedy.user.handel %>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="share_btn">
+                            <button type="button" id="share_remedy_btn">Share</button>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="top_comment_h2 remedy_info_content">
+                    <h2>Leave a comment</h3>
+                        <section class="comment_section container_box">
+
+                            <div class="comment_form">
+                                <p class="comment_counter">Comments (<%= comments.length %>)</p>
+                                <form method="post" action="/comment/<%= remedy._id %>">
+                                    <textarea name="comment" id="comment_text_area" rows="3" required placeholder="Leave a comment"></textarea>
+                                    <input type="submit" value="Post Comment">
+                                </form>
+                            </div>
+
+                            <section class="posted_comments">
+                                <% if (comments.length > 0) { %>
+                                <% comments.reverse().forEach(comment => { %>
+                                <div class="card">
+                                    <div class="user_image_name">
+                                        <div class="imgAndname">
+                                            <% if (comment.user) { %>
+                                            <% if (comment && comment.user && comment.user.profileImage && comment.user.profileImage.length > 0) { %>
+                                            <img src="/images/uploads/<%= comment.user.profileImage %>" />
+                                            <% } else { %>
+                                            <img src="/images/user img/user1.png" />
+                                            <% } %>
+                                            <div class="message_div">
+                                                <div class="name-time">
+                                                <h3>
+                                                    <%= comment.user.username %>
+                                                </h3>
+                                                <small>
+                                                    <%= comment.createdAt.toLocaleTimeString() %>
+                                                </small>
+                                                
+                                            </div>
+                                                <p>
+                                                    <%= comment.comment %>
+                                                </p>
+                                              <div class="like-dislike">
+                                                  
+                                                       <a href="/comment/like/<%= comment._id %>"><i class="fa-solid fa-heart"></i></a><small>0 likes</small>
+                                                 <small>
+                                                    Reply
+                                                </small>
+                                              </div>
+
+                                            </div>
+                                            <% } else { %>
+                                            <p>User information not available</p>
+                                            <% } %>
+
+                                            <% if (comment.user && comment.user.username  === user.username) { %>
+                                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                <div class="delete">
+                                                    <a href="/delete/<%= comment._id %>"><i class="fa-solid fa-trash" style="color: #000;"></i></a>
+                                                </div>
+                                            <% } %>
+                                            
+                                        </div>
+                                       
+                                    </div>
+                                </div>
+                                <% }); %>
+                                <% } else { %>
+                                <div class="no_comments">
+                                    <p>No comments yet</p>
+                                </div>
+                                <% } %>
+                            </section>
+                        </section>
+                </section>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function (event) {
+            var scrollpos = localStorage.getItem("scrollpos");
+            if (scrollpos) window.scrollTo(0, scrollpos);
+        });
+
+        window.onscroll = function (e) {
+            localStorage.setItem("scrollpos", window.scrollY);
+        };
+    </script>
+
+    <% include ./partials/footer.ejs %>
+    <% include ./partials/foot.ejs %>
+</body>

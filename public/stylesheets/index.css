@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+  }
+  body {
+    overflow-y: scroll;
+  }
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hero section */
+  
+  .heroSection {
+    width: 100%;
+    height: 80vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(/images/hero/hero\ 2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .text_container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .heroTxt {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .heroTxt span {
+    color: #08f26e;
+  }
+  .heroTxt h1 {
+    font-size: 60px;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  .heroTxt p {
+    font-size: 18px;
+    color: #ffffff;
+    display: inline;
+    padding: 0;
+  }
+  #create_acBtn {
+    width: 180px;
+    padding: 10px;
+    font-size: 17px;
+  
+    border: 0;
+    border: 2px solid rgb(102, 116, 204);
+    background-color: rgb(102, 116, 204);
+  
+    color: #fff;
+    border-radius: 30px;
+    margin-top: 30px;
+    transition: 0.5s ease;
+  }
+  #create_acBtn:hover {
+    transform: scale(1.1);
+  }
+
+  @media (max-width: 950px) {
+    .heroSection {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(/images/hero/hero3.jpg);
+
+      }
+    }
+    @media (max-width: 750px) {
+      .heroTxt h1 {
+        font-size: 50px;
+      }
+      .heroTxt p {
+        font-size: 16px;
+      }
+      #create_acBtn {
+        font-size: 15px;
+        width: 150px;
+      }
+    }
+    
+      @media (max-width: 600px) {
+        .heroTxt h1 {
+          font-size: 35px;
+        }
+        .heroTxt p {
+          font-size: 13px;
+        }
+        #create_acBtn {
+          font-size: 13px;
+          width: 130px;
+        }
+        
+      }
+
+
+      /* Benifits card area */
+
+      .card_section {
+        width: 100%;
+        padding: 50px 20px;
+        background-color: #f7f8fc;
+        justify-content: center;
+        overflow: hidden;
+      }
+      .card_section h1 {
+        font-size: 40px;
+        text-align: center;
+        color: rgb(102, 116, 204);
+      }
+      .cards_div {
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        justify-content: center;
+        row-gap: 25px;
+        column-gap: 25px;
+        margin-top: 6%;
+      }
+      .card {
+        width: 380px;
+        height: 340px;
+        border-bottom-color: rgba(229, 48, 62, 0.39);
+        border-radius: 5px;
+        padding: 20px;
+        display: flex;
+        background-color: #ffffff;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        transition: 0.3s;
+      
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      }
+      .card img {
+        width: 120px;
+        margin-bottom: 30px;
+      }
+      .card h4 {
+        font-size: 18px;
+      }
+      .card p {
+        color: #4a4f5c;
+        font-size: 16px;
+        padding: 10px 40px;
+      }
+      .c1 {
+        border-bottom: 7px solid rgba(1, 162, 142, 0.39);
+      }
+      .c2 {
+        border-bottom: 7px solid rgba(229, 48, 62, 0.39);
+      }
+      .c3 {
+        border-bottom: 7px solid rgba(55, 19, 253, 0.39);
+      }
+      .c4 {
+        border-bottom: 7px solid rgba(19, 120, 175, 0.39);
+      }
+      .c5 {
+        border-bottom: 7px solid rgba(26, 158, 253, 0.39);
+      }
+      .c6 {
+        border-bottom: 7px solid rgba(249, 113, 21, 0.39);
+      }
+      .card:hover {
+        transform: scale(1.05);
+      }
+      @media(max-width: 900px){
+        .card {
+          width: 280px;
+          height: 240px;
+          padding: 10px;
+        }
+        .card img {
+          width: 80px;
+          margin-bottom: 10px;
+        }
+        .card h4 {
+          font-size: 16px;
+        }
+        .card p {
+          color: #4a4f5c;
+          font-size: 13px;
+          padding: 10px 10px;
+        }
+      }
+      @media (max-width: 850px) {
+        .sect_txt h1 {
+          font-size: 24px;
+        }
+      }
+      @media (max-width: 500px) {
+        .card_section h1 {
+          font-size: 30px;
+        }
+      }
+
+
+      
+      
+    
+
+  
+  

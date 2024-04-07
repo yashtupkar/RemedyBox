@@ -1,0 +1,259 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+  }
+  body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to top, #37ecba 0%, #72afd3 100%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .box1 {
+    position: relative;
+  }
+  .signin_page {
+    height: 80vh;
+    width: fit-content;
+    border-radius: 5px;
+    display: flex;
+    border: 2px solid #4681f4;
+    justify-content: center;
+    background-color: #fff;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
+.box1content {
+  display: flex;
+  justify-content: center;
+   height: 100%;
+   width: fit-content;
+   position: relative;
+  flex-direction: column;
+}
+.box1content img {
+  height: 100%;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  width: 100%;
+}
+.signup_text{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #00000085;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+justify-content: center;
+padding: 20px;
+
+}
+.signup_text h2{
+  font-size: 35px;
+  }
+  .signup_text h2 span{
+    color: #46f4b7;
+  }
+  .box2 {
+    width: 400px;
+    height: 100%;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+  
+    align-items: center;
+    }
+    .headTxt h2{
+      color: #4681f4;
+    }
+  .inpufield {
+    display: flex;
+    flex-direction: column;
+    width: 97%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  #email,
+#pass,
+#username {
+  width: 100%;
+  margin-top: 10px;
+  padding: 15px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  border-bottom: 3px solid rgba(93, 93, 93, 0.271);
+  transition: 0.5s ease;
+}
+  #pass:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+      rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  }
+  #pass:focus {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+      rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+    border-bottom: 3px solid rgb(85, 243, 6);
+  }
+  
+  #email:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+      rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  }
+  #email:focus {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+      rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+    border-bottom: 3px solid rgb(85, 243, 6);
+  }
+  #username:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+      rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  }
+  #username:focus {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+      rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+    border-bottom: 3px solid rgb(85, 243, 6);
+  }
+  
+  .forgotsection {
+    display: flex;
+    width: 350px;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  .rememberMe label,
+  input {
+    cursor: pointer;
+  }
+  .Forgotpass a {
+    text-decoration: none;
+    color: #000;
+  }
+  .loginbutton {
+    width: 97%;
+  }
+  
+  #loginbtn {
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: 0;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4681f4;
+    opacity: 0.8;
+    color: #fff;
+    transition: 0.5s ease;
+  }
+  #loginbtn:hover {
+    opacity: 1;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
+  .signup {
+    margin-top: 15px;
+    font-size: 15px;
+    margin-bottom: 0px;
+  }
+  .signup a {
+    text-decoration: none;
+  }
+  .socialbtn {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 97%;
+  }
+  #facebtn {
+    padding: 10px;
+    border: 0;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.5s ease;
+  }
+  #facebtn:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
+  .div12
+  .div12 {
+    width: 20px;
+  }
+  .div1 {
+    width: fit-content;
+  }
+  .div2 {
+    width: fit-content;
+  }
+  #faceimg,
+  #googleimg {
+    width: 25px;
+    height: 25px;
+  }
+  
+  @media (max-width: 1040px) {
+    .box1content img {
+      height: 100%;
+     
+    }
+    .box2 {
+      width: 350px;
+    }
+    .signin_page {
+      width: fit-content;
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .box1content img {
+      display: none;
+    }
+    .signup_text{
+      display: none;
+     }
+    .signin_page {
+      width: 100%;
+      height: 100vh;
+      background-color: #00000046;
+      border-radius: 0px;
+    }
+    .box1 {
+      width: 100%;
+    }
+    #email,
+    #pass,
+    #username {
+      padding: 10px;
+      margin-top: 10px;
+    }
+    .box2 {
+      height: 500px;
+      background-color: #fff;
+      border-radius: 5px;
+      border: 2px solid #4681f4;
+    }
+  }
+  @media (max-width: 370px) {
+    .box2 {
+      width: 330px;
+      
+    }
+  }
+  

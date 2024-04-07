@@ -1,0 +1,52 @@
+<% include ./partials/head.ejs %>
+<link rel="stylesheet" href="/stylesheets/search.css">
+
+<html>
+
+<body>
+
+    <% include ./partials/navigation.ejs %>
+    <section class="search_system">
+        <section class="search_input_section">
+            <form action="">
+                <input type="text" placeholder="Search Remedies" name="search" id="search_input">
+                <input type="submit" value="Search" id="search_btn">
+            </form>
+        </section>
+
+        <section class="search_results">
+            <div class="cards">
+                <% posts.reverse().forEach(function(post){ %>
+                <div class="card">
+                    <div class="card_img">
+                        <img src="/images/uploads/<%= post.postImage %>">
+                    </div>
+                    <div class="card_content">
+                        <div class="card_title">
+                            <div class="div_txt">
+                                <h1><%= post.title %></h1>
+                                <p><%= post.discription %></p>
+                            </div>
+                            <div class="div_btn">
+                                <a href="/<%= post._id %>"><button class="search_btn" id="view_btn">View More</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <% }); %>
+            </div>
+        </section>
+     <div class="pagination">
+        <a href="?page=<%=  previousPage %>"><button><< prev</button></a>
+        <% for(let j = 1; j <= totalPages; j++) { %>
+            <a href="?page=<%= j %>"><button><%= j %></button></a>
+        <% } %>
+        <a href="?page=<%= nextPage %>"><button>next >></button></a>
+    </div>
+    </section>
+
+    <% include ./partials/footer.ejs %>
+    <% include ./partials/foot.ejs %>
+</body>
+
+</html>

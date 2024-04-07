@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+.Create_post{
+    width: 100%;
+    height: 100vh;
+    background-color: #00000012;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.Create_post_container{
+    width: 50%;
+    height: 80vh;
+    display: flex;
+    box-shadow: rgba(100, 100, 111, 1) 0px 7px 29px 0px;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 20px;
+    margin-top: 30px;
+
+
+}
+.Create_post_container_overflow{
+   overflow-y: scroll;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    
+   
+}
+.post_head_top{
+    width: 90%;
+    height: fit-content;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+}
+.post_head_top h3{
+    font-size: 20px;
+}
+.post_head_top a{
+    text-decoration: none;
+    color: #000;
+}
+.post_head_top a i{
+  font-size: 20px;
+  position: absolute;
+  right: 5px;
+  top:5px;
+}
+.postimage{
+    width: 80%;
+    height: 1300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background-color: grey;
+   
+}
+/* .postimage img{
+  width: 100%;
+  border-radius: 20px;
+}
+
+.post_image_form{
+    width: 90%;
+    height: fit-content;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+
+} */
+
+#select_img_btn{
+    cursor: pointer;
+    background-color: rgb(102, 116, 204);
+    border: 2px solid rgb(102, 116, 204) ;
+    color:#fff;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+.post_content {
+    width: 90%;
+    height: fit-content;
+    padding: 0px 30PX ;
+   
+}
+.post_content form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.post_content form textarea{
+    width: 100%;
+
+    padding: 10px;
+    outline: 0;
+    border-radius: 20px;
+    border: 2px solid rgba(128, 128, 128, 0.201);
+    transition: 0.5s ease;
+}
+.post_content form textarea:focus{
+    border: 2px solid rgb(102, 116, 204);
+}
+textarea::-webkit-scrollbar{
+    display: none;
+}
+
+.img_file_input{
+    font-size: 16px;
+    background-color: rgba(173, 168, 168, 0.116);
+    border-radius: 50px;
+    width:90%;
+    outline: none;
+    border: 2px solid rgb(102, 116, 204);
+}
+::-webkit-file-upload-button{
+    color: #fff;
+    border: none;
+    background-color: rgb(102, 116, 204);
+    border-radius: 50px;
+    padding: 12px;
+    
+
+}
+#title_area{
+    height: 60px;
+}
+#discription_area{
+    height: 106px;
+}
+#ingredient_area{
+   height: 80px;
+}
+#dosage_area{
+    height: 80px;
+}
+#disclamer_area{
+    height: 90px;
+}
+#share_btn{
+    width: 100%;
+    padding: 20px;
+    border-radius: 20px;
+    border:0;
+    color: #fff;
+    font-size: 17px;
+    background-color: rgb(102, 116, 204);
+}
+
+@media(max-width:950px){
+    .Create_post_container{
+        width: 80%;
+    }
+}
+@media(max-width:500px){
+    .Create_post_container{
+        width: 95%;
+    }
+}

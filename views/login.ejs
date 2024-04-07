@@ -1,0 +1,62 @@
+<% include ./partials/head.ejs %>
+<link rel="stylesheet" href="/stylesheets/login.css" />
+
+</head>
+<body>
+  <section class="box1">
+    <div class="signin_page">
+    <div class="box1content">
+      <img src="/images/hero/login_bg.png" />
+      <div class="signup_text">
+        <h2>Welcome to<span> Remedy Box</span> <br>Your <span>Wellness</span> Companion</h2>
+        <p>Unlock the power of holistic health with Remedy Box.</p>
+      </div>
+    </div>
+    <div class="box1text"></div>
+    <div class="box2">
+      <div class="headTxt">
+
+        <h2>Sign In</h2>
+      </div>
+
+   
+      
+<div class="inpufield">
+  <% if(error.length > 0){ %>
+    <p class="error"><%= error %></p>
+  <% } %>
+  <form action="/login" method="post">
+        <input id="email" type="text" placeholder="Username" name="username" />
+        <input id="pass" type="password" placeholder="Password" name="password"/>
+        <div class="forgotsection">
+          <div class="rememberMe">
+            <input type="checkbox" name="checkbox" id="checkbox" />
+            <label for="checkbox">Remember me</label>
+          </div>
+          <div class="Forgotpass">
+            <a href="#">Forgot password?</a>
+          </div>
+        </div>
+        <input id="loginbtn" type="submit" value="Login"/>
+  </form>
+ 
+    </div>
+ 
+    
+
+
+      <div class="signup">
+        <p>New to Remediebox?<a href="/register"> Create an acount.</a></p>
+      </div>
+      <p>or</p>
+      <div class="socialbtn">
+          <button id="facebtn"><img id="faceimg" src="/images/hero/facebook-removebg-preview.png" ><div class="div1">Login with facebook</div><div class="div12"></div></button>
+          <button id="facebtn"><img id="googleimg" src="/images/hero/google-removebg-preview.png" ><div class="div2">Login with Google</div><div class="div22"></div></button>
+      </div>
+    </div>
+  </div>
+  </section>
+
+
+
+  <% include ./partials/foot.ejs %>

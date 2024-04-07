@@ -1,0 +1,43 @@
+<% include ./partials/head.ejs %>
+<link rel="stylesheet" href="/stylesheets/register.css">
+</head>
+<body>
+  <section class="box1">
+    <div class="signin_page">
+    
+    <div class="box2">
+      <div class="headTxt">
+        <h2>Sign Up</h2>
+      </div>
+      <div class="inpufield">
+        
+        <form action="/register" method="post">
+          <input id="username" type="text" placeholder="Username" name="username"/>
+          <input id="email" type="email" placeholder="Email Or phone no" name="email"/>
+          <input id="pass" type="password" placeholder="Create Password" name="password"/>
+          <button type="submit" id="loginbtn">Register</button>
+    </form>
+  </div>
+      
+
+      <div class="signup">
+        <p>Already have an account?<a href="/login"> Sign in.</a></p>
+      </div>
+      <p>or</p>
+      <div class="socialbtn">
+          <button id="facebtn"><img id="faceimg" src="/images/hero/facebook-removebg-preview.png" ><div class="div1">Login with facebook</div><div class="div12"></div></button>
+          <button id="facebtn"><img id="googleimg" src="/images/hero/google-removebg-preview.png" ><div class="div2">Login with Google</div><div class="div22"></div></button>
+      </div>
+    </div>
+    <div class="box1content">
+      <img src="/images/hero/signup.png" />
+      <div class="signup_text">
+        <h2>Join<span> Remedy Box</span> <br>Your Path to <span>Wellness</span><br>Begins Here</h2>
+        <p>Start your journey to better health and well-being by creating your Remedy Box account.</p>
+      </div>
+    </div>
+  
+  </section>
+ 
+  <% include ./partials/foot.ejs %>
+

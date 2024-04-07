@@ -1,0 +1,77 @@
+<% include ./partials/head.ejs %>
+    <link rel="stylesheet" href="/stylesheets/profile.css">
+
+    <head>
+
+    <body>
+        <% include ./partials/navigation.ejs %>
+
+            <section class="profile_section">
+                <section class="head_profile">
+                    <div class="row1">
+                        <div class="profile_image">
+                            <% if (user && user.profileImage && user.profileImage.length > 0) { %>
+                                <a href="/profile"><img src="/images/uploads/<%= user.profileImage %>" /></a>
+                              <% } else { %>
+                                <a href="/profile"><img src="/images/user img/user1.png"/></a>
+                              <% } %>
+                        </div>
+                        <div class="profile_username">
+                            <h3>
+                                <%=user.username%>
+                            </h3>
+                            <p>
+                                <%=user.handel%>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="profile_bio">
+                        <p>
+                            <%=user.bio%>
+                        </p>
+                    </div>
+                    <div class="profile_button">
+                        <a href="/editprofile"><button class="edit_btn">Edit Profile</button></a>
+
+                        <a href="/createposts"><button id="button2">Upload Remedies</button></a>
+                    </div>
+
+                </section>
+
+                <section class="uploaded_posts ">
+                    <div class="cards">
+                        <% user.posts.reverse().forEach(function(post){ %>
+                            <div class="card">
+
+                                <img src="/images/uploads/<%= post.postImage %>">
+                                <div class="img_title">
+                                    <h3>
+                                        <%= post.title %>
+                                    </h3>
+                                </div>
+                                <div class="img_btn">
+                                    <a href="<%= post._id %>"><button>View <span>More</span> </button></a>
+                                    <div class="post_icons">
+                                        <a href="/editpost/<%= post._id %>"><i
+                                                class="fa-solid fa-pen-to-square"></i></a>
+                                        <a href="/delete/<%= post._id %>"><i class="fa-solid fa-trash"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+
+                            <% })%>
+
+
+                    </div>
+
+                </section>
+
+
+            </section>
+
+            <% include ./partials/foot.ejs %>

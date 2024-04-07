@@ -1,0 +1,44 @@
+<% include ./partials/head.ejs %>
+    <link rel="stylesheet" href="/stylesheets/editpost.css">
+
+    <head>
+
+    <body>
+        <% include ./partials/navigation.ejs %>
+            <section class="Create_post">
+                <section class="Create_post_container">
+                    <div class="post_head_top">
+                        <a href="/profile"><i class="fa-solid fa-xmark"></i></a>
+                        <h3>Edit Post</h3>
+                        <hr>
+                    </div>
+                    <section class="Create_post_container_overflow">
+
+                        <div class="post_content">
+                            <form action="/editpost/<%= post._id %>" method="post" id="uploadimgform"
+                                enctype="multipart/form-data">
+                                <input type="file" accept="images/png, images/jpg," id="input_new_file"
+                                    class="img_file_input" name="file" value="<%- post.postImage %>">
+                                <textarea type="text" placeholder="Title" name="title"
+                                    id="title_area"><%= post.title %></textarea>
+                                <textarea type="text" placeholder="Discription" name="discription"
+                                    id="discription_area"><%= post.discription %></textarea>
+                                <textarea type="text" placeholder="Ingredient" name="ingredients"
+                                    id="ingredient_area"><%= post.ingredients %></textarea>
+                                <textarea type="text" placeholder="Dosage" name="dosage"
+                                    id="dosage_area"><%= post.dosage %></textarea>
+                                <textarea type="text" placeholder="Disclamer" name="disclaimer"
+                                    id="disclamer_area"><%= post.disclaimer %></textarea>
+                                <textarea type="text"
+                                    placeholder="If you have a YouTube or Instagram, share the related video link here."
+                                    name="videolink" id="video_link_area"><%= post.videoLink %></textarea>
+                                <input type="submit" value="Share" id="share_btn">
+                            </form>
+                        </div>
+                    </section>
+                </section>
+            </section>
+
+
+
+            <% include ./partials/foot.ejs %>

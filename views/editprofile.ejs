@@ -1,0 +1,52 @@
+<% include ./partials/head.ejs %>
+<link rel="stylesheet" href="/stylesheets/editprofile.css">
+<html>
+    <body>
+        <% include ./partials/navigation.ejs %>
+        <section class="edit_profile_form" id="edit_profile_form">
+            <div class="edit_profile_form_container" id="edit_profile_form_container">
+             <div class="head_top">
+                  <a href="/profile"><i class="fa-solid fa-xmark"></i></a>
+                    <h3>Edit Profile</h3>
+                </div>
+                    <div class="image">
+                        <% if (user && user.profileImage && user.profileImage.length > 0) { %>
+                            <img src="/images/uploads/<%= user.profileImage %>" />
+                          <% } else { %>
+                            <img src="/images/user img/user1.png"/>
+                          <% } %>
+                    </div>
+
+                    <div class="edit_content">
+                    <form action="/upload" method="post" id="uploadform" enctype="multipart/form-data" >
+                       
+                            <input type="file" accept="images/png, images/jpg," id="input_new_file" name="file">
+
+                            <span id="new_image_btn" >New image</span>
+                            </form>
+
+                            <!-- <input type="submit" class="update_btn" value="Update"> -->
+                        <form action="/profileDetail" method="post">
+                            <input type="text" placeholder="User Handel" name="handel" id="input1" required value="<%= user.handel %>">
+                            <textarea type="text" placeholder="Bio" name="bio"  id="input2"><%= user.bio %></textarea required>
+                            <input type="submit" value="Save" id="input3_btn" >
+                        </form>
+                          
+                    </div>        
+                 </div>
+               
+    
+            </div>
+        </section>
+    
+        <script>
+              document.querySelector("#new_image_btn").addEventListener("click",function(){
+                document.querySelector("#uploadform input").click();
+              })
+
+            document.querySelector("#uploadform input").addEventListener("change",function(){
+                document.querySelector("#uploadform").submit();
+            })
+        </script>
+
+<% include ./partials/foot.ejs %>

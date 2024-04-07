@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+
+.about_hero{
+    width: 100%;
+    height: 60vh;
+    background-image: url(/images/hero/about.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero_txt{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #0000007f;
+    padding: 60px;
+    color: #fff;
+    
+}
+.hero_txt h1{
+    font-size: 40px;
+    text-decoration: underline;
+    color: #fff;
+    text-decoration-color: rgb(102, 116, 204);
+    margin-bottom: 20px;
+}
+.p_div{
+    display: flex;
+    align-items: center;
+    width: 80%;
+    height: fit-content;
+    margin-top: 30px;
+}
+
+.all_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(128, 128, 128, 0.301);
+}.about_rural,.about_container,.aboutimages{
+    width: 95%;
+    border-radius: 20px;
+    background-color: #fff;
+    margin: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 30px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.about_container{
+    margin-top: 0;
+    gap: 20px;
+}
+.about_rural h1{
+    font-size: 25px;
+    margin-bottom: 20px;
+    color:  rgb(102, 116, 204);
+}
+.about_rural img{
+    width: 60%;
+    height: 10%;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    border: 3px solid  rgb(102, 116, 204);
+}
+.container_box{
+  width: 90%;
+  height: fit-content;
+  background-color:  rgb(102, 116, 204);
+  color: #fff;
+  border-radius: 20px;
+  padding: 30px;
+  font-size: 18px;
+}
+.about_container h1{
+    font-size: 25px;
+    margin-bottom: 20px;
+    color:  rgb(102, 116, 204);
+}
+.container_box h1{
+    color: #fff;
+    font-size: 20px;
+}
+.aboutimages{
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
+.aboutimages img{
+    width: 30%;
+    height: 50%;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    border: 3px solid  rgb(102, 116, 204);
+}
+@media(max-width:950px){
+    /* .about_hero{
+       padding-top: 30px;
+    } */
+    .hero_txt h1{
+        font-size: 30px;
+        font-size: 30px;
+    }
+    .p_div
+    {
+        width: 92%;
+    }
+    .about_rural h1{
+        font-size: 23px;
+    }
+}
+@media(max-width:500px){
+    /* .about_hero{
+       padding-top: 30px;
+    } */
+    .hero_txt {
+        padding: 10px;
+    }
+    .hero_txt h1{
+        font-size: 30px;
+        margin-top: 20px;
+    }
+    .p_div
+    {
+        width: 100%;
+        font-size: 15px;
+    }
+    .about_rural,.about_container{
+        padding: 15px;
+        border-radius: 5px;
+    }
+    .about_container h1{
+        font-size: 19px;
+        padding-bottom: 0px;
+        margin: 0;
+    }
+    .about_rural h1{
+        font-size: 19px;
+    }
+    .about_rural img{
+        width: 100%;
+        }  
+        .container_box{
+            width: 100%;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 14px;
+            line-height: normal;
+          } 
+          .container_box ul {
+            padding-left: 10px;
+            padding-top: 10px;
+          }}

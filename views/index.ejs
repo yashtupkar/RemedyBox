@@ -1,0 +1,89 @@
+<% include ./partials/head.ejs %>
+
+<link rel="stylesheet" href="/stylesheets/index.css">
+</head>
+<body>
+  <!-- Nav bar -->
+<% include ./partials/navigation.ejs %>
+
+  <!-- Hero Section -->
+
+<section class="heroSection" id="heroSection">
+  <div class="text_container">
+    <div class="heroTxt">
+      <h1><span>Good Health</span> Starts At Home</h1>
+      <p>Find "Homemade health remedies" for every problems.</p>
+      <p>Which are use make traditonal practices to improve out health</p>
+      <p>Even you also share your remedies to others.</p>
+      <button id="create_acBtn">Create Account</button>
+    </div>
+  </div>
+</section>
+  
+ <!-- Benifits card area -->
+
+ <section class="card_section">
+  <h1 data-aos="fade">Benefits Of Remedies</h1 >
+  <div class="cards_div">
+    <div class="card c1" data-aos="fade-right">
+      <img src="/images/hero/cost efficient 2.png" />
+      <h4>Cost-Effective</h4>
+      <p>
+        Natural remedies are usually cheaper than medicines you buy from a
+        pharmacy. They use everyday ingredients you might already have at
+        home.
+      </p>
+    </div>
+    <div class="card c2" data-aos="fade-up">
+      <img src="/images/hero/easy to find 2.png" />
+      <h4>Easy to Find</h4>
+      <p>
+        You can get the ingredients for natural remedies easily. They’re
+        often things you cook with or find in local markets.
+      </p>
+    </div>
+    <div class="card c3" data-aos="fade-left">
+      <img src="/images/hero/gental.png" />
+      <h4>Gentle and Mild</h4>
+      <p>
+        Natural remedies don’t have strong side effects like some medicines.
+        They work gently with your body
+      </p>
+    </div>
+    <div class="card c4"  data-aos="fade-right">
+      <img src="/images/hero/effective.png" />
+      <h4>Effective</h4>
+      <p>
+        Some natural remedies really work! For example, turmeric helps with
+        pain, and ginger is good for digestion.
+      </p>
+    </div>
+    <div class="card c5"  data-aos="fade-up">
+      <img src="/images/hero/fewer2.png" />
+      <h4>Fewer Side Effects</h4>
+      <p>
+        Natural remedies usually don’t cause bad reactions in your body.
+      </p>
+    </div>
+    <div class="card c6" data-aos="fade-left">
+      <img src="/images/hero/card holistic approach.png" />
+      <h4>Holistic Approach</h4>
+      <p>They consider your whole health—body, mind, and emotions.</p>
+    </div>
+  </div>
+</section>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+AOS.init({
+    offset: 300,
+    duration: 1000,
+});
+</script>
+
+
+<!-- footer section -->
+<% include ./partials/footer.ejs %>
+
+
+<% include ./partials/foot.ejs %>

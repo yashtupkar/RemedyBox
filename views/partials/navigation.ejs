@@ -1,0 +1,119 @@
+<% include ./head.ejs %>
+<link rel="stylesheet" href="/stylesheets/navigation.css" />
+<head>
+  <body>
+    <!-- Navigation Bar -->
+
+    <section class="nav">
+      <div class="navBar">
+        <div class="navLogo">
+          <a href="/index"><img src="/images/hero/mainlogo.png" alt=""></a>
+          <a href="/index"><h1>RemedyBox</h1></a>
+        </div>
+        <div class="navLinks" id="navLink_links">
+          <ul class="navLink_links">
+            <% if (user && user.profileImage && user.profileImage.length > 0) { %>
+              <a href="/profile"><img src="/images/uploads/<%= user.profileImage %>" /></a>
+            <% } else { %>
+              <a href="/profile"><img src="/images/user img/user1.png"/></a>
+            <% } %>
+            <hr>
+            <li id="home "><a href="/index"><i class="fa-solid fa-house" id="icon"></i> HOME</a></li>
+            <li id="about"><a href="/about"><i class="fa-solid fa-address-card"id="icon"></i> ABOUT US</a></li>
+            <li id="contact"><a href="/contact"><i class="fa-solid fa-phone"id="icon"></i> CONTACT US</a></li>
+            <li id="profile"><a href="/profile"><i class="fa-solid fa-user"id="icon"></i> MY PROFILE</a></li>
+             <hr>
+           
+            <li id="logout">
+              <a href="logout">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                Log out
+              </a>
+            </li>
+            <li id="search">
+              <a href="/search"><button><i class="fa-solid fa-magnifying-glass"></i></button></a>
+            </li>
+          </ul>
+        </div>
+        <div class="navProfile">
+          <a href="/search"><button id="search_icon " class="button1"><i class="fa-solid fa-magnifying-glass"></i></button></a>
+         
+      <!-- index.ejs -->
+     
+      <div class="profile_img_name"  >
+<% if (user && user.profileImage && user.profileImage.length > 0) { %>
+  <a href="/profile"><img src="/images/uploads/<%= user.profileImage %>" /></a>
+<% } else { %>
+  <a href="/profile"><img src="/images/user img/user1.png"/></a>
+<% } %>
+        <p onclick="toggle()">
+          <%= user.username %>
+        </p>
+        <i class="fa-solid fa-caret-down" class="down-i" onclick="toggle()"></i>
+</div>
+
+
+<ul class="profile-dropdown-list">
+  <li class="profile-dropdown-list-item">
+    <a href="/editprofile">
+      <i class="fa-regular fa-user"></i>
+      Edit Profile
+    </a>
+  </li>
+
+  <li class="profile-dropdown-list-item">
+    <a href="#">
+      <i class="fa-regular fa-envelope"></i>
+      Inbox
+    </a>
+  </li>
+
+  <li class="profile-dropdown-list-item">
+    <a href="#">
+      <i class="fa-solid fa-sliders"></i>
+      Settings
+    </a>
+  </li>
+
+  <li class="profile-dropdown-list-item">
+    <a href="#">
+      <i class="fa-regular fa-circle-question"></i>
+      Help
+    </a>
+  </li>
+  <hr />
+
+  <li class="profile-dropdown-list-item">
+    <a href="logout">
+      <i class="fa-solid fa-arrow-right-from-bracket"></i>
+      Log out
+    </a>
+  </li>
+</ul>
+
+        
+
+
+          <i
+            class="fa-solid fa-bars"
+            id="showmenu_icon"
+            onclick="showmenu()"
+          ></i>
+          <i
+            class="fa fa-times"
+            aria-hidden="true"
+            id="hidemenu_icon"
+            onclick="hidemenu()"
+          ></i>
+        </div>
+      </div>
+
+      <!-- search section -->
+
+
+    </section>
+
+    <script src="/javascripts/navigation.js"></script>
+
+    <% include ./foot.ejs %>
+

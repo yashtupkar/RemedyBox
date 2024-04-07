@@ -1,0 +1,38 @@
+<% include ./partials/head.ejs %>
+<link rel="stylesheet" href="/stylesheets/createposts.css">
+<head>
+    <body>
+<% include ./partials/navigation.ejs %>   
+<section class="Create_post">
+    <section class="Create_post_container">
+        <div class="post_head_top">
+            <a href="/profile"><i class="fa-solid fa-xmark"></i></a>
+            <h3>Create Post</h3>
+            <hr>
+        </div>
+        <section class="Create_post_container_overflow">
+        <!-- <div class="postimage">
+            <img src="/public/images/hero/hero 2.jpg">
+        </div> -->
+
+      <div class="post_content">
+        <form action="/postupload" method="post" id="uploadimgform" enctype="multipart/form-data">
+            <input type="file" accept="images/png, images/jpg," id="input_new_file" class="img_file_input" name="file">
+            <textarea type="text" placeholder="Title" name="title" id="title_area"></textarea>
+            <textarea type="text" placeholder="Discription" name="discription" id="discription_area"></textarea>
+            <textarea type="text" placeholder="Ingredient" name="ingredients" id="ingredient_area"></textarea>
+            <textarea type="text" placeholder="Dosage" name="dosage" id="dosage_area"></textarea>
+            <textarea type="text" placeholder="Disclamer" name="disclaimer" id="disclamer_area"></textarea>
+            <textarea type="text" placeholder=
+            "If you have a YouTube or Instagram, share the related video link here." name="videolink" id="video_link_area"></textarea>
+            <input type="submit" value="Share" id="share_btn">
+        </form>
+    </div>
+        </section>
+    </section>
+</section>
+
+
+        
+<% include ./partials/foot.ejs %> 
+   

@@ -1,0 +1,230 @@
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+body{
+    background-color: rgba(243, 240, 240, 0.867);
+ } 
+
+.profile_section{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.head_profile{
+    width: 95%;
+    position: relative;
+    height: fit-content;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin-top: 80px;
+    padding: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.row1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+   
+}
+.profile_image img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid  rgb(102, 116, 204);
+    margin-top: 5px;
+    object-fit: contain;
+   }
+.profile_username{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 5px;
+}
+.profile_username p {
+    opacity: 0.6;
+}
+.profile_bio{
+    margin-bottom: 20px;
+    color: #00000099;
+    font-size: 14px;
+}
+.profile_button{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.profile_button button{
+    padding: 7px 15px;
+    font-size: 15px;
+    border:0;
+    border: 2px solid  rgb(102, 116, 204);
+    border-radius: 5px;
+    color:  rgb(102, 116, 204);
+    background-color: transparent;
+}
+#button2{
+    background-color:  rgb(102, 116, 204);
+    color: #fff;
+}
+.profile_button input{
+    display: none;
+}
+
+@media(max-width:500px){
+    .row1{
+        flex-direction: row;
+        justify-content: start;
+        gap:20px;
+    }
+    .head_profile{
+       
+        align-items: start;
+        padding-left: 20px;
+    }
+    .profile_username{
+        align-items: start;
+    }
+    .profile_image img{
+        height: 60px;
+        width: 60px;
+    }
+}
+
+
+.uploaded_posts {
+    width: 90%;
+    height: fit-content;
+    /* background-color: grey; */
+   padding: 30px;
+}
+.cards{
+ 
+    margin: 10px;
+    width: 100%;
+    margin: 0px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    
+}
+.card{
+    height: fit-content;
+    width: 300px;
+    position: relative;
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    break-inside: avoid;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.card img{
+    width: 260px;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    border: 3px solid rgb(102, 116, 204);
+}
+.img_title{
+    width: 100%;
+    height: 60px;
+    overflow: hidden;
+    margin:10px 0px;
+  
+}
+.card h3{
+
+    font-weight: 400;
+   
+}
+.card button{
+    font-size: 16px;
+    padding: 5px 10px;
+    color: #fff;
+    background-color: rgb(102, 116, 204);
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    transition: 0.5s ease;
+}
+.card button:hover{
+    transform: scale(1.1);
+}
+.img_btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.img_btn i{
+    font-size: 22px;
+}
+
+.post_icons{
+    display: flex;
+    gap: 10px;
+}
+.post_icons a{
+    text-decoration: none;
+    color: rgba(101, 101, 101, 0.553);
+    transition: 0.5s ease;
+}
+.post_icons a:hover{
+    color: rgb(102, 116, 204);
+
+}
+
+@media(max-width:800px){
+    .cards{
+        gap: 20px;
+    }
+    .card{
+        width: 150px;
+        padding:15px;
+       
+    } 
+    .card img{
+        width: 120px;
+        height: 120px;
+    }
+    .card h3{
+        font-size: 12px;
+        font-weight: 400;
+      
+    }
+    .uploaded_posts{
+        padding: 0;
+        padding-top: 20px;
+    }
+    .img_btn i{
+        font-size: 16px;
+    }
+    .post_icons{
+        /* flex-direction: column; */
+        gap: 5px;
+    }
+    .img_btn button{
+        font-size: 13px;
+    }
+    .img_btn button span{
+        display: none;
+    }
+    .img_title{
+        height: 40px;
+    }
+}
