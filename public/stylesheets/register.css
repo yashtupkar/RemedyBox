@@ -10,7 +10,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to top, #37ecba 0%, #72afd3 100%);
+    background:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),url(/images/all\ backgrounds/bg_login.png);   
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -22,8 +22,10 @@
     height: 80vh;
     width: fit-content;
     border-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
     display: flex;
-    border: 2px solid #4681f4;
+   
     justify-content: center;
     background-color: #fff;
     align-items: center;
@@ -38,6 +40,8 @@
    width: fit-content;
    position: relative;
   flex-direction: column;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 .box1content img {
   height: 100%;
@@ -53,6 +57,8 @@
   color: #fff;
   display: flex;
   flex-direction: column;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 justify-content: center;
 padding: 20px;
 

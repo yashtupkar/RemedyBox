@@ -145,7 +145,7 @@
     height: 45px;
     border-radius: 50%;
     border: 2px solid rgb(102, 116, 204);
-    margin-top: 6px;
+    /* margin-bottom: 6px; */
     margin-right: 5px;
     transition: 0.5s ease;
     object-fit: contain;
@@ -178,23 +178,26 @@
 
   .profile_img_name{
     display: flex;
-    align-items: center;
+    /* align-items: center; */
    
     border-radius: 50px;
     border: 2px solid rgb(102, 116, 204);
     padding: 0;
-    height: 47px;
+    height: 48px;
+  
     padding-right: 5px;
   }
+
 
   .profile_img_name p{
     font-size: 15px;
     font-weight: 500;
+    align-self: center;
     color: rgb(102, 116, 204);
   }
-  .down-i{
-    font-size: 15px;
-    font-weight: 500;
+  .fa-caret-down{
+  
+    align-self: center;
     color: rgb(102, 116, 204)
   }
   .profile_img_name i{

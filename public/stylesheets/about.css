@@ -94,18 +94,33 @@
     color: #fff;
     font-size: 20px;
 }
+.container_box2{
+    width: 90%;
+    height: fit-content;
+    color:  rgb(102, 116, 204);
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    border: 2px solid  rgb(102, 116, 204);
+    font-size: 18px;
+}
+.container_box2 h1{
+   
+    font-size: 20px;
+}
 .aboutimages{
     flex-direction: row;
     gap: 20px;
     align-items: center;
 }
-.aboutimages img{
-    width: 30%;
-    height: 50%;
-    margin-bottom: 20px;
-    border-radius: 20px;
-    border: 3px solid  rgb(102, 116, 204);
+.about_image{
+    display: flex;
+    gap: 20px;
 }
+.about_image img{
+    width: 200px;
+    height: 200px;
+    }  
 @media(max-width:950px){
     /* .about_hero{
        padding-top: 30px;
@@ -121,6 +136,9 @@
     .about_rural h1{
         font-size: 23px;
     }
+    #img3{
+        display: none;
+    } 
 }
 @media(max-width:500px){
     /* .about_hero{
@@ -132,6 +150,9 @@
     .hero_txt h1{
         font-size: 30px;
         margin-top: 20px;
+    }
+    #img1{
+        display: none;
     }
     .p_div
     {
@@ -150,9 +171,9 @@
     .about_rural h1{
         font-size: 19px;
     }
-    .about_rural img{
-        width: 100%;
-        }  
+    #img3{
+        display: none;
+    } 
         .container_box{
             width: 100%;
             border-radius: 5px;

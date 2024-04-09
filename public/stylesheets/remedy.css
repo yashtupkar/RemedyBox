@@ -67,6 +67,7 @@ justify-content: center;
  }
  .box_container{
    display: flex;
+   gap: 10px;
    align-items: center;
    position: relative;
  }
@@ -74,6 +75,10 @@ justify-content: center;
    margin-left: 10px;
    font-weight: 600;
    color: rgb(102, 116, 204);
+ }
+ .like_conformation_message p {
+   font-size: 14px;
+   text-align: center;
  }
  .provider_image img{
     width: 60px;
@@ -122,6 +127,17 @@ justify-content: center;
     border: 2px solid rgb(102, 116, 204);
     margin: 20px;
    
+ }
+ .like_icon{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+ }
+ .like_icon a {
+   color: grey;
+ }
+ .like_icon a i{
+   font-size: 18px;
  }
  .share_btn{
    position: absolute;
@@ -210,13 +226,15 @@ justify-content: center;
    display: flex;
    align-items: center;
    gap: 10px;
+   
    margin: 5px;
    justify-content: space-between;
  }
  .imgAndname{
    display: flex;
-  
+  position: relative;
    gap: 10px;
+   width: 100%;
  }
  .name-time{
    display: flex;
@@ -246,6 +264,23 @@ justify-content: center;
    flex-direction: column;
    align-items: center;
 
+ }
+ .delete_comment_icon{
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   position: absolute;
+  right: 10px;
+   height: fit-content;
+
+ }
+ .delete_comment_icon  i{
+   color: rgba(79, 79, 79, 0.564);
+     transition: 0.5s;
+ }
+
+ .delete_comment_icon i:hover {
+   color: rgb(102, 116, 204);
  }
  .user_image_name img{
    width: 50px;
